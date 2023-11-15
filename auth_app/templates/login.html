@@ -1,0 +1,23 @@
+<html>
+    <head>
+    </title>authentication page</title>
+    </head>
+    <body>
+        <h1>User login page</h1>
+        {% with messages = get_flashed_messages() %}    
+        {% if messages %}
+        <div class="notification is-danger">
+        {{ messages[0] }}. Go to <a href="{{ 'register.html' }}">Register page</a>.
+        </div>
+        {% endif %}
+        {% endwith %}
+        <form action="#" method="POST">
+            <input type="text" name="username">
+            <input type="password" name="password">
+            <input type="submit" value="submit">
+        </form>
+        <form action="/register_template" method="GET">
+            <input type='submit' value='register'>
+        </form>
+    </body>
+    </html>
